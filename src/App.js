@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import  {useState, createContext}from 'react'
+import { Layout } from 'antd';
 import './App.css';
+import AffirmationCard from './components/AffirmationCard';
+import AffirmationList from './components/AffirmationList';
+
+const {Header , Content} = 'Layout'
+
+export const UserContext =createContext;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <UserContext.Provider value ={{user, setUser}}>
+    <div className='App'>
+     
+        <h1> Daily Affirmations </h1>
+        <AffirmationList />
+        <AffirmationCard/>
+           
+ 
+     </div>
+    
+    // </UserContext.Provider>
+  )
 }
 
 export default App;
