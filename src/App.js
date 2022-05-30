@@ -1,10 +1,9 @@
 import  {useState, createContext}from 'react'
-import { Layout } from 'antd';
 import './App.css';
 import AffirmationCard from './components/AffirmationCard';
 import AffirmationList from './components/AffirmationList';
 
-const {Header , Content} = 'Layout'
+
 
 export const UserContext =createContext;
 
